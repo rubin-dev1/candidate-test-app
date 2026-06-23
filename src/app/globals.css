@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f8fafc;
+    color: #0f172a;
+    min-height: 100dvh;
+  }
+
+  /* Убираем стандартный outline, но оставляем доступность */
+  :focus-visible {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  /* Плавный скролл */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
+  /* Запрет выделения текста для интерактивных элементов */
+  .no-select {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
